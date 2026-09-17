@@ -1,7 +1,10 @@
 use crate::equation::{QuadraticEquation, Solution};
 
 pub fn solve(eq: &QuadraticEquation) -> Solution {
-    assert!(eq.a() != 0.0, "The coefficient 'a' cannot be equal to 0 in a quadratic equation.");
+    assert!(
+        eq.a() != 0.0,
+        "The coefficient 'a' cannot be equal to 0 in a quadratic equation."
+    );
 
     let d = discriminant(eq);
 

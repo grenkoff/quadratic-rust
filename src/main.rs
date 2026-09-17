@@ -1,8 +1,8 @@
 mod equation;
 mod solver;
 
-use std::io;
 use equation::{QuadraticEquation, Solution};
+use std::io;
 
 fn read_int(prompt: &str) -> i32 {
     loop {
