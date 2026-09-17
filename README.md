@@ -44,7 +44,7 @@ The discriminant `d = b² - 4ac` decides the outcome:
 
 ## Development
 
-The repository ships with VS Code settings (`.vscode/settings.json`): on save, rustfmt formats the file and clippy runs with the `pedantic` lint group. The same checks can be run manually:
+Formatting follows `rustfmt.toml` (`max_width = 100`). Before committing, run:
 
 ```bash
 cargo fmt
