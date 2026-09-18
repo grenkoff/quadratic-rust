@@ -4,7 +4,7 @@ mod solver;
 use equation::{QuadraticEquation, Solution};
 use std::io;
 
-fn read_int(prompt: &str) -> i32 {
+fn read_int(prompt: &str) -> f64 {
     loop {
         println!("{prompt}");
 
@@ -13,7 +13,7 @@ fn read_int(prompt: &str) -> i32 {
             .read_line(&mut input)
             .expect("Unable to read the line.");
 
-        match input.trim().parse::<i32>() {
+        match input.trim().parse::<f64>() {
             Ok(num) => return num,
             Err(_) => println!("Please enter a valid integer."),
         }
@@ -25,7 +25,7 @@ fn main() {
     let b = read_int("Enter b: ");
     let c = read_int("Enter c: ");
 
-    let eq = QuadraticEquation::new(a.into(), b.into(), c.into());
+    let eq = QuadraticEquation::new(a, b, c);
 
     let result = solver::solve(&eq);
 
