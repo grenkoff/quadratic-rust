@@ -1,5 +1,11 @@
 use crate::equation::{QuadraticEquation, Solution};
 
+/// Solves the quadratic equation.
+///
+/// # Panics
+///
+/// Panics if the coefficient `a` is equal to 0.
+#[must_use]
 pub fn solve(eq: &QuadraticEquation) -> Solution {
     assert!(
         eq.a() != 0.0,

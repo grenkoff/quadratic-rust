@@ -12,6 +12,7 @@ pub struct QuadraticEquation {
 }
 
 impl QuadraticEquation {
+    #[must_use]
     pub fn new(a: f64, b: f64, c: f64) -> QuadraticEquation {
         QuadraticEquation { a, b, c }
     }
